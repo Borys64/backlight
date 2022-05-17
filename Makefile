@@ -1,5 +1,5 @@
 build:
-	g++ bl.cpp -o backlight
+	g++ backlight.cpp -o backlight
 install:
 	cp backlight /bin/backlight
 	chmod +x /bin/backlight
