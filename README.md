@@ -16,5 +16,29 @@ sudo make install
 ```BASH
 # must be run as root
 # use -h for more options
-sudo backlight <-l[evel]> <level> [-h[elp]]
+sudo backlight <-l[evel] <level>> [-h[elp] -d[evices] -D[evice] <id>]
+```
+
+## Options
+| Syntax             | Description                                        |
+| ------------------ | -------------------------------------------------- |
+| `-h[elp]`          | Display usage information                          |
+| `-l[evel] <level>` | Set display brightness (between 1 and 100)         |
+| `-d[evices]`       | Display list of available devices                  |
+| `-D[evice] <id>`   | Set brightness of specific device from device list |
+
+# Examples
+## Set brightness of all displays to 100% (default):
+```BASH
+sudo backlight -l 100 # -l <%>
+```
+
+## Display all available devices:
+```BASH
+backlight -d
+```
+Example output:
+```
+$ backlight -d
+0: intel_backlight
 ```
